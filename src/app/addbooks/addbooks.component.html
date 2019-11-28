@@ -1,0 +1,76 @@
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle"> title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+                <div id="container1">
+                    <div class="container">
+                        <h2 class="page-header">Add Books</h2>
+                        <hr />
+
+                        <label>Bookname: </label>
+
+                        <input type="text" class="form-control" name="First Name" [(ngModel)]="Bookname" />
+
+                        <label> Authorname: </label>
+
+                        <input type="text" class="form-control" name="Last Name" [(ngModel)]="Authorname" />
+
+                        <label> quantity </label>
+
+                        <input type="text" class="form-control" name="Phone" [(ngModel)]="quantity" />
+
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="close()">
+          Close
+        </button>
+                <button type="button" class="btn btn-primary" (click)="addinfo()">
+          Save changes
+        </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Book Name</th>
+            <th scope="col">Author Name</th>
+            <th scope="col">Quanitiy</th>
+            <th scope="col">
+                <button type="button" class="button_dis" data-toggle="modal" data-target="#exampleModalCenter">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2Mt9dEfUunkSKoOaieeZp7e1qovjHwlS8GjSQWBBVIuhPhcir&s"
+            height="20px" />
+          Add item
+        </button>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let post of posts">
+            <td>
+                {{ post.Bookname }}
+            </td>
+
+            <td>
+                {{ post.Authorname }}
+            </td>
+            <td>
+                {{ post.quantity }}
+            </td>
+
+            <td></td>
+        </tr>
+    </tbody>
+</table>

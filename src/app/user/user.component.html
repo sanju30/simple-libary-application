@@ -1,0 +1,25 @@
+<h4 style="margin-left: 42%;">Users only!!</h4>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Book Name</th>
+      <th scope="col">Author Name</th>
+      <th scope="col">Quanitiy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of posts">
+      <td>
+        {{ post.Bookname }}
+      </td>
+
+      <td>
+        {{ post.Authorname }}
+      </td>
+      <td>
+        {{ post.quantity }}
+      </td>
+    </tr>
+  </tbody>
+</table>

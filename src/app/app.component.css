@@ -1,0 +1,40 @@
+.body {
+  margin-left: 40%;
+  margin-top: 5%;
+}
+
+p {
+  margin-left: 5%;
+}
+
+.justify-content-end {
+  background-color: #31bc84;
+  height: 56px;
+}
+.nav-link {
+  margin-right: 34px;
+}
+a {
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 20px;
+}
+a:hover {
+  color: #c82333;
+}
+
+.container_home {
+  height: 920px;
+  background-color: cornsilk;
+}
+.container_admin {
+  height: 478px;
+  background-color: darkgrey;
+}
+
+.flotccf {
+  margin-right: 60%;
+  color: white;
+}

@@ -1,0 +1,10 @@
+thead {
+    background: #31BC85;
+}
+
+table {
+    margin: auto;
+    margin-top: 50px;
+    width: 80%;
+    border: 1px solid gray;
+}

@@ -1,0 +1,14 @@
+thead {
+  background: #31bc85;
+}
+
+table {
+  margin: auto;
+  margin-top: 50px;
+
+  border: 1px solid gray;
+}
+
+.modal-content {
+  padding: 20px;
+}

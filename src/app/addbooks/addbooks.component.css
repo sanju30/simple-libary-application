@@ -1,0 +1,20 @@
+/* .outerdiv
+{
+    margin: 70%;
+} */
+
+thead {
+  background: #31bc85;
+}
+
+table {
+  margin: auto;
+  margin-top: 50px;
+  width: 80%;
+  border: 1px solid gray;
+}
+.button_dis {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}

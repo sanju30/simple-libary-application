@@ -1,0 +1,127 @@
+<div class="container" id="edit">
+  <div *ngIf="toggleform">
+    <div
+      class="modal fade"
+      id="exampleModalCenter"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">
+              Modal title
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <label> Bookname </label>
+          <input
+            type="text"
+            class="form-control"
+            name="Bookname"
+            [(ngModel)]="selecteditem.Bookname"
+          />
+
+          <label> Authorname: </label>
+          <input
+            type="text"
+            class="form-control"
+            name="Authorname"
+            [(ngModel)]="selecteditem.Authorname"
+          />
+
+          <label> quantity </label>
+          <input
+            type="text"
+            class="form-control"
+            name="quantity"
+            [(ngModel)]="selecteditem.quantity"
+          />
+
+          <br />
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="
+                update(
+                  selecteditem.Bookname,
+                  selecteditem.Authorname,
+                  selecteditem.quantity
+                )
+              "
+              data-dismiss="modal"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Book Name</th>
+        <th scope="col">Author Name</th>
+        <th scope="col">Quanitiy</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of posts">
+        <td>
+          {{ post.Bookname }}
+        </td>
+
+        <td>
+          {{ post.Authorname }}
+        </td>
+        <td>
+          {{ post.quantity }}
+        </td>
+
+        <td>
+          <input
+            type="button"
+            (click)="deletinfo(post._id)"
+            (click)="onclickdelete()"
+            value="delete"
+            class="btn btn-danger"
+          />
+        </td>
+
+        <td>
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-toggle="modal"
+            data-target="#exampleModalCenter"
+            (click)="showeditform(post)"
+          >
+            edit
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
